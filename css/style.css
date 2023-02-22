@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ccc;
+}
+
+nav {
+    padding: 1rem;
+    background-color: aquamarine;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hamburguer-menu {
+    background-color: rgb(98, 0, 255);
+    height: 50px;
+    width: 50px;
+    position: relative;
+    cursor: pointer;
+    padding: 1rem;
+} 
+
+.ham-bar {
+    width: 70%;
+    height: 4px;
+    background-color: aqua;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.6s, opacity 0.8s, top 0.8s, left 0.6s;
+}
+
+.bar-top {
+    top: 25%;
+}
+
+.bar-bottom {
+    top: 75%;
+}
+
+.hamburguer-menu.active .bar-top {
+    transform: translate(-50%, -50%) rotate(-315deg);
+    top: 50%;
+}
+
+.hamburguer-menu.active .bar-mid {
+    opacity: 0%;
+}
+
+.hamburguer-menu.active .bar-bottom {
+    transform: translate(-50%, -50%) rotate(-225deg);
+    top: 50%;
+}
+
+.off-screen-menu {
+    position: fixed;
+    top: 0;
+    right: -75%;
+    background-color: rgb(8, 10, 122, 0.5);
+    height: 100vh;
+    width: 75%;
+    transition: right .5s;
+}
+
+.off-screen-menu.active {
+    right: 0;
+}
+
+
+
+
+
+
+
